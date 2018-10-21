@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles/journal.css">
     <title>Daily Journal</title>
+    
 </head>
 <body>
     <div class="journalMain">
@@ -26,14 +27,22 @@
             </fieldset>
             <fieldset>
                 <label for="moodForDay">Mood for the day</label>
-                <select name="moodForDay">
+                <select id="moodForDay" name="moodForDay">
                     <option value="happy">Happy</option>
                     <option value="sad">Sad</option>
                     <option value="angry">Angry</option>
                 </select>
             </fieldset>
-            <input type="submit" value="Record Journal Entry">
+            <input type="submit" value="Record Journal Entry" onclick="submitJournal()">
         </form>
+
+        <!-- dynamic output from javascript -->
+        <article id="entryLog" class="entryLog">
+        </article>
     </div>
+
+
+
+    <script src="scripts/journal.js"></script>
 </body>
 </html>
